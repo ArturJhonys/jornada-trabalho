@@ -1,12 +1,4 @@
 let calculaHoras = () => {
-	
-	//let parm = document.getElementById('j').value
-
-	//console.log(`parm ${parm}`)
-
-	//let jornada = parm === '' ? 525 : parm.newRecord()
-
-	//console.log(`Jornada: ${jornada}`)
 
 	// Pega os valores dos inputs
 	let jornada = document.getElementById('j').value.newRecord()
@@ -14,27 +6,19 @@ let calculaHoras = () => {
 	let saida1 = document.getElementById('s1').value.newRecord()
 	let entrada2 = document.getElementById('e2').value.newRecord()
 	
-	console.log(`jornada ${jornada}`)
 	// Define o parâmetro de Jornada de Trabalho
 	let parametroJornadaTrabalho = jornada === null ? recordFromTotalMinutes(525) : jornada
-	console.log(`parametro Jornada Trabalho: ${parametroJornadaTrabalho}`)
-	//let parametroJornadaTrabalho = jornada
-	/* Está havendo um problema na conversão da Jornada, quando o campo jornada vai vazio ele retorna um objeto causando um erro no calculo
-	dos dados */
-	console.log(`parametroJornadaTrabalho.Horas: ${parametroJornadaTrabalho.h}`)
-	console.log(`parametroJornadaTrabalho.Minutos: ${parametroJornadaTrabalho.m}`)
-	console.log(`parametroJornadaTrabalho.total: ${parametroJornadaTrabalho.total}`)
+	
 	// Fórmula de cálculo de hora de saída
 	let minutosTrabalhado = saida1.total - entrada1.total
 	let minutosATrabalhar = parametroJornadaTrabalho.total - minutosTrabalhado
 	let totalCalculo = entrada2.total + minutosATrabalhar
-	console.log(`Minutos a trabalhar: ${minutosATrabalhar}`)
 	
 	let saida2 = recordFromTotalMinutes(totalCalculo)
 	
 	// Atualiza campo com o horário de saída
 	document.getElementById("s2").value = saida2.desc
-		
+	
 }
 
 // Evento onClick do botão Calcular
