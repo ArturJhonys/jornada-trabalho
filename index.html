@@ -5,31 +5,38 @@
 	<meta charset="utf-8">
 	<title>add demo</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
 </head>
 
 <body>
 	<script type="module" src="js/main.js"></script>
+	<script src="js/bootstrap/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/bootstrap/popper.min.js"></script>
 
-	<div id="app">
-		<strong>Jornada</strong>
-		<input id="j" type="text"><br />
+	<div class="container">
+		<div id="app">
+			<strong>Jornada</strong>
+			<input id="j" type="text"><br />
 
-		<table>
-			<tr>
-				<td>Entrada</td>
-				<td>Saída</td>
-			</tr>
-			<tr>
-				<td><input type="text" id="e1" class="record"></td>
-				<td><input type="text" id="s1" class="record"></td>
-			</tr>
-			<tr>
-				<td><input type="text" id="e2" class="record"></td>
-				<td><input type="text" id="s2" class="record" disabled></td>
-			</tr>
-		</table>
-		<button id="btnCalcular">Calcular</button>
+			<table>
+				<tr>
+					<td>Entrada</td>
+					<td>Saída</td>
+				</tr>
+				<tr>
+					<td><input type="text" id="e1" class="record"></td>
+					<td><input type="text" id="s1" class="record"></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="e2" class="record"></td>
+					<td><input type="text" id="s2" class="record" disabled></td>
+				</tr>
+			</table>
+			<button id="btnCalcular" class="btn btn-primary">Calcular</button>
+		</div>
 	</div>
+
 
 </body>
 
