@@ -1,15 +1,29 @@
-#app {
-    width: 1024px;
-    height: 400px;
-    margin: auto;
-    top: 50%;
-    left: 50%;
+.container{
+    height: 100%;
+    display: grid;
 }
 
-#app .record {
-    width: 100px;
-    height: auto;
+#app{
+   margin: auto;
+   padding-top: 20%;
+}
+#btnCalcular{
+    margin-left: 85px;
+    margin-top: 5px;
+}
+#j{
+    width:265px;
+}
+.inputHoras{
+    width: 120px !important;
+    text-align: center;
+}
+#campoJornada{
+    margin-left: 60px;
+}
+strong{
     float: left;
-    top: 50%;
-    left: 50%;
+}
+td{
+    text-align: center;
 }

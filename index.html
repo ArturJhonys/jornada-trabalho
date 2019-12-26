@@ -15,25 +15,29 @@
 	<script src="js/bootstrap/popper.min.js"></script>
 
 	<div class="container">
-		<div id="app">
-			<strong>Jornada</strong>
-			<input id="j" type="text"><br />
+		<div id="app" class="col-md-6">
 
+			<strong>Jornada</strong>
+			<div id="campoJornada">
+				<input class="form-control form-control-sm inputHoras" id="j" type="time"><br />
+			</div>
 			<table>
 				<tr>
 					<td>Entrada</td>
 					<td>Saída</td>
 				</tr>
 				<tr>
-					<td><input type="text" id="e1" class="record"></td>
-					<td><input type="text" id="s1" class="record"></td>
+					<td><input class="form-control form-control-sm inputHoras" type="time" id="e1" class="record"></td>
+					<td><input class="form-control form-control-sm inputHoras" type="time" id="s1" class="record"></td>
 				</tr>
 				<tr>
-					<td><input type="text" id="e2" class="record"></td>
-					<td><input type="text" id="s2" class="record" disabled></td>
+					<td><input class="form-control form-control-sm inputHoras" type="time" id="e2" class="record"></td>
+					<td><input class="form-control form-control-sm inputHoras" type="text" id="s2" class="record"
+							disabled></td>
 				</tr>
 			</table>
 			<button id="btnCalcular" class="btn btn-primary">Calcular</button>
+
 		</div>
 	</div>
 
