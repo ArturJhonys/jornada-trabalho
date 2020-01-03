@@ -21,8 +21,17 @@ let calculaHoras = () => {
 	
 }
 
+let limpaCampo = () =>{
+
+	document.getElementById('e1').value = ''
+	document.getElementById('s1').value = ''
+	document.getElementById('e2').value = ''
+	document.getElementById("s2").value = ''
+}
+
 // Evento onClick do botão Calcular
 document.getElementById('btnCalcular').addEventListener('click',calculaHoras)
+document.getElementById('btnlimparCampo').addEventListener('click',limpaCampo)
 
 // Estrutura do registro de ponto 
 var record = function (h, m, t, d){

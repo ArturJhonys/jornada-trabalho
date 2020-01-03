@@ -7,23 +7,28 @@
    margin: auto;
    padding-top: 20%;
 }
-#btnCalcular{
-    margin-left: 85px;
+
+.botao{
+    margin-left: 25px;
     margin-top: 5px;
 }
 #j{
     width:265px;
 }
+
 .inputHoras{
     width: 120px !important;
     text-align: center;
 }
+
 #campoJornada{
     margin-left: 60px;
 }
-strong{
+
+#jornada{
     float: left;
 }
-td{
+
+.celula{
     text-align: center;
 }
