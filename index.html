@@ -21,15 +21,18 @@
 			<div id="campoJornada">
 				<input class="form-control form-control-sm inputHoras" value="08:45" id="j" type="time"><br />
 			</div>
-			<table>
-				<tr>
+			<table id="tabela">
+				<th>
 					<td class="celula">Entrada</td>
 					<td class="celula">Saída</td>
-				</tr>
+				</th>
 				<tr>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e1" class="record"></td>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="s1" class="record"></td>
+					<td><button id="adicionaEntradaSaida" type="button" class="btn btn-light"><b>+</b></button></td>
 				</tr>
+				<!--Area para adicionar o novos campos de entrada e saida-->
+				<tr id="areaCampoAdicional"></tr>
 				<tr>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e2" class="record"></td>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="text" id="s2" class="record"

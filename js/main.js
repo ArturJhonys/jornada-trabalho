@@ -20,7 +20,7 @@ let calculaHoras = () => {
 	document.getElementById("s2").value = saida2.desc
 	
 }
-
+//Limpa Campos Carregados
 let limpaCampo = () =>{
 
 	document.getElementById('e1').value = ''
@@ -29,9 +29,23 @@ let limpaCampo = () =>{
 	document.getElementById("s2").value = ''
 }
 
+/* PROBLEMA AO CRIAR O CAMPO ELE ESTÁ REPETINDO O ULTIMO VALOR PARA A PROXIMA LINHA ADICIONADA */
+let adicionaCampo = () =>{
+	var novaEntradaSaida = document.querySelector('#areaCampoAdicional')
+	var tabela = document.getElementById('tabela')
+	var linha = tabela.rows.length
+	console.log(linha)
+	var texto = `<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e${linha+1}" class="record"></td>
+	             <td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="s${linha+2}" class="record"></td>`
+	
+	 console.log(texto)
+	novaEntradaSaida.insertAdjacentHTML('afterend',texto)
+}
+
 // Evento onClick do botão Calcular
 document.getElementById('btnCalcular').addEventListener('click',calculaHoras)
 document.getElementById('btnlimparCampo').addEventListener('click',limpaCampo)
+document.getElementById('adicionaEntradaSaida').addEventListener('click',adicionaCampo)
 
 // Estrutura do registro de ponto 
 var record = function (h, m, t, d){
