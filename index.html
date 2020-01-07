@@ -22,25 +22,32 @@
 				<input class="form-control form-control-sm inputHoras" value="08:45" id="j" type="time"><br />
 			</div>
 			<table id="tabela">
-				<th>
+				<tr>
 					<td class="celula">Entrada</td>
 					<td class="celula">Saída</td>
-				</th>
-				<tr>
+				</tr>
+				<tbody id="corpoTabela"></tbody>
+				<!-- <tr>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e1" class="record"></td>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="s1" class="record"></td>
 					<td><button id="adicionaEntradaSaida" type="button" class="btn btn-light"><b>+</b></button></td>
 				</tr>
-				<!--Area para adicionar o novos campos de entrada e saida-->
 				<tr id="areaCampoAdicional"></tr>
 				<tr>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e2" class="record"></td>
 					<td class="celula"><input class="form-control form-control-sm inputHoras" type="text" id="s2" class="record"
 							disabled></td>
+				</tr> -->
+			</table>
+			<table>
+				<tr>
+					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="ef" class="record"></td>
+					<td class="celula"><input class="form-control form-control-sm inputHoras" type="text" id="sf" class="record" disabled></td>
 				</tr>
 			</table>
 			
 			<button id="btnCalcular" class="btn btn-primary botao">Calcular</button>
+			<button id="adicionaEntradaSaida" type="button" class="btn btn-light botao">Adicionar</button>
 			<button id="btnlimparCampo" class="btn btn-danger botao">limpar</button>
 
 		</div>
