@@ -4,45 +4,63 @@
 <head>
 	<meta charset="utf-8">
 	<title>Jornada</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-	<script type="module" src="js/main.js"></script>
-	<script src="js/bootstrap/jquery-3.4.1.slim.min.js"></script>
-	<script src="js/bootstrap/bootstrap.min.js"></script>
-	<script src="js/bootstrap/popper.min.js"></script>
+	<nav class="navbar navbar-dark bg-dark">
+		<span class="navbar-brand mb-0 h1">Jornada de Trabalho</span>
+		<a class="nav-link p-2" href="https://github.com/arturjhonys/jornada-trabalho"><i class="fa fa-github"
+				style="color: white;"></i></a>
+	</nav>
 
 	<div class="container">
-		<div id="app" class="col-md-6">
+		<div id="app" class="col-md-4 col-offset-4">
 
-			<strong id="jornada">Jornada</strong>
-			<div id="campoJornada">
-				<input class="form-control form-control-sm inputHoras" value="08:45" id="j" type="time"><br />
+			<div class="card" style="width: 18rem;">
+				<div class="card-header card-title">
+					<strong id="jornada">Jornada:</strong>
+					<div id="campoJornada">
+						<input id="j" type="time" class="form-control form-control-sm inputHoras" value="08:45">
+					</div>
+				</div>
+				<div class="card-body">
+					<table>
+						<tr>
+							<td class="celula">Entrada</td>
+							<td class="celula">Saída</td>
+						</tr>
+						<tr>
+							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time"
+									id="e1" class="record"></td>
+							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time"
+									id="s1" class="record"></td>
+						</tr>
+						<tr>
+							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time"
+									id="e2" class="record"></td>
+							<td class="celula"><input class="form-control form-control-sm inputHoras" type="text"
+									id="s2" class="record" disabled></td>
+						</tr>
+					</table>
+				</div>
+				<div class="card-body">
+					<button id="btnCalcular" class="btn btn-primary botao">Calcular</button>
+					<button id="btnlimparCampo" class="btn btn-danger botao">limpar</button>
+
+				</div>
 			</div>
-			<table>
-				<tr>
-					<td class="celula">Entrada</td>
-					<td class="celula">Saída</td>
-				</tr>
-				<tr>
-					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e1" class="record"></td>
-					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="s1" class="record"></td>
-				</tr>
-				<tr>
-					<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e2" class="record"></td>
-					<td class="celula"><input class="form-control form-control-sm inputHoras" type="text" id="s2" class="record"
-							disabled></td>
-				</tr>
-			</table>
-			
-			<button id="btnCalcular" class="btn btn-primary botao">Calcular</button>
-			<button id="btnlimparCampo" class="btn btn-danger botao">limpar</button>
 
 		</div>
 	</div>
 
+
+	<script type="module" src="js/main.js"></script>
+	<script src="js/bootstrap/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/bootstrap/popper.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
 
 </body>
 

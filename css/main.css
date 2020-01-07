@@ -1,34 +1,23 @@
-.container{
-    height: 100%;
-    display: grid;
-}
-
-#app{
+#app {
    margin: auto;
-   padding-top: 20%;
+   padding-top: 20px;
 }
 
-.botao{
-    margin-left: 25px;
-    margin-top: 5px;
-}
-#j{
-    width:265px;
+.botao {
+    width: 120px;
 }
 
-.inputHoras{
+.inputHoras {
     width: 120px !important;
     text-align: center;
 }
 
-#campoJornada{
-    margin-left: 60px;
-}
-
-#jornada{
+#jornada {
     float: left;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
-.celula{
+.celula {
     text-align: center;
 }
