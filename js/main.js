@@ -43,14 +43,11 @@ let calculaHoras = () => {
 let limpaCampo = () =>{
 	let i = 1
 
-	//limpa linhas dinâmicas
-	while(contador >= i){
-		document.getElementById(`e${i}`).value = ''
-		document.getElementById(`s${i}`).value = ''	
-		i += 1						
-	}
+	// Remove linhas dinâmicas, reseta o contador e adiciona a primeira linha de volta
+	contador = 1
+	tabela.innerHTML = novaLinha()
 	
-	//limpa as linhas fixas
+	// limpa as linhas fixas
 	document.getElementById('ef').value = ''
 	document.getElementById("sf").value = ''
 }
