@@ -5,10 +5,7 @@
 #app {
    margin: auto;
    padding-top: 20px;
-}
-
-.botao {
-    width: 120px;
+   width: 327px;
 }
 
 .inputHoras {
@@ -23,5 +20,10 @@
 }
 
 .celula {
+    text-align: center;
+}
+
+table {
+    border-collapse: separate;
     text-align: center;
 }

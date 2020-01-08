@@ -28,32 +28,26 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<table>
+					<table id="tabela">
 						<tr>
 							<td class="celula">Entrada</td>
 							<td class="celula">Saída</td>
 						</tr>
+						<tbody id="corpoTabela"></tbody>
+					</table>
+					<table>
 						<tr>
-							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time"
-									id="e1" class="record"></td>
-							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time"
-									id="s1" class="record"></td>
-						</tr>
-						<tr>
-							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time"
-									id="e2" class="record"></td>
-							<td class="celula"><input class="form-control form-control-sm inputHoras" type="text"
-									id="s2" class="record" disabled></td>
+							<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="ef" class="record"></td>
+							<td class="celula"><input class="form-control form-control-sm inputHoras" type="text" id="sf" class="record" disabled></td>
 						</tr>
 					</table>
 				</div>
 				<div class="card-body">
 					<button id="btnCalcular" class="btn btn-primary botao">Calcular</button>
+					<button id="adicionaEntradaSaida" type="button" class="btn btn-light botao">Adicionar</button>
 					<button id="btnlimparCampo" class="btn btn-danger botao">limpar</button>
-
 				</div>
 			</div>
-
 		</div>
 	</div>
 

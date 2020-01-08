@@ -1,37 +1,77 @@
-let calculaHoras = () => {
+const novaLinha = () => {
+	return `<tr><td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="e${contador}" class="record"></td>` +
+	`<td class="celula"><input class="form-control form-control-sm inputHoras" type="time" id="s${contador}" class="record"></td></tr>`
+}
 
+let calculaHoras = () => {
 	// Pega os valores dos inputs
 	let jornada = document.getElementById('j').value.newRecord()
-	let entrada1 = document.getElementById('e1').value.newRecord()
-	let saida1 = document.getElementById('s1').value.newRecord()
-	let entrada2 = document.getElementById('e2').value.newRecord()
+	let entradaFinal = document.getElementById('ef').value.newRecord()
 	
+	let minutosTrabalhado = 0
+
+	if (contador > 0){
+		let i = 1
+		let entrada = []
+		let saida = []
+
+		while(contador >= i){
+
+			entrada = document.getElementById(`e${i}`).value.newRecord()
+			saida = document.getElementById(`s${i}`).value.newRecord()
+
+			minutosTrabalhado += saida.total - entrada.total
+			i += 1
+		}
+
+	}
+
 	// Define o parâmetro de Jornada de Trabalho
 	let parametroJornadaTrabalho = jornada === null ? recordFromTotalMinutes(525) : jornada
-	
-	// Fórmula de cálculo de hora de saída
-	let minutosTrabalhado = saida1.total - entrada1.total
+
+	// Formula
 	let minutosATrabalhar = parametroJornadaTrabalho.total - minutosTrabalhado
-	let totalCalculo = entrada2.total + minutosATrabalhar
-	
-	let saida2 = recordFromTotalMinutes(totalCalculo)
+	let totalCalculo = entradaFinal.total + minutosATrabalhar	
+	let saidaFinal = recordFromTotalMinutes(totalCalculo)
 	
 	// Atualiza campo com o horário de saída
-	document.getElementById("s2").value = saida2.desc
+	document.getElementById("sf").value = saidaFinal.desc
 	
 }
 
+//Limpa Campos Carregados
 let limpaCampo = () =>{
+	let i = 1
 
-	document.getElementById('e1').value = ''
-	document.getElementById('s1').value = ''
-	document.getElementById('e2').value = ''
-	document.getElementById("s2").value = ''
+	//limpa linhas dinâmicas
+	while(contador >= i){
+		document.getElementById(`e${i}`).value = ''
+		document.getElementById(`s${i}`).value = ''	
+		i += 1						
+	}
+	
+	//limpa as linhas fixas
+	document.getElementById('ef').value = ''
+	document.getElementById("sf").value = ''
 }
+
+let adicionaCampo = () =>{
+	contador += 1
+	tabela.innerHTML += novaLinha()
+}
+
+//contador de linhas de entrada
+var contador = 1
 
 // Evento onClick do botão Calcular
 document.getElementById('btnCalcular').addEventListener('click',calculaHoras)
 document.getElementById('btnlimparCampo').addEventListener('click',limpaCampo)
+document.getElementById('adicionaEntradaSaida').addEventListener('click',adicionaCampo)
+
+var tabela = document.getElementById('corpoTabela')
+
+tabela.innerHTML += novaLinha()
+
 
 // Estrutura do registro de ponto 
 var record = function (h, m, t, d){
@@ -61,3 +101,4 @@ const recordFromTotalMinutes = (total) => {
 
 	return new record(h, m, total, desc)
 }
+
