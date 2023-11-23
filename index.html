@@ -7,14 +7,20 @@
 	<title>Jornada</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
 	<nav class="navbar navbar-dark bg-dark">
 		<span class="navbar-brand mb-0 h1">Jornada de Trabalho</span>
-		<a class="nav-link p-2" href="https://github.com/arturjhonys/jornada-trabalho"><i class="fa fa-github"
-				style="color: white;"></i></a>
+		<a class="nav-link ml-auto" href="#">
+			<i class="fa fa-toggle-on toogle-on-desktop" onclick="ToggleDarkMode('light')"></i>
+			<i class="fa fa-toggle-off toogle-off-desktop" onclick="ToggleDarkMode('dark')"></i>
+		</a>
+		<a class="nav-link" href="https://github.com/arturjhonys/jornada-trabalho">
+			<i class="fa fa-github"></i>
+		</a>
 	</nav>
 
 	<div class="container">
@@ -56,6 +62,7 @@
 	<script src="js/bootstrap/jquery-3.4.1.slim.min.js"></script>
 	<script src="js/bootstrap/popper.min.js"></script>
 	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/navbar.js"></script>
 
 </body>
 

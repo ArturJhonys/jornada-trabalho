@@ -1,0 +1,53 @@
+:root {
+    /* Dark Mode */
+    --text-primary-dark: #fff;
+    --text-secondary-dark: rgba(255, 255, 255, 0.7);
+    --text-disabled-dark: rgba(255, 255, 255, 0.5);
+    --action-active-dark: #fff;
+    --action-hover-dark: rgba(255, 255, 255, 0.08);
+    --action-selected-dark: rgba(255, 255, 255, 0.16);
+    --action-disabled-dark: rgba(255, 255, 255, 0.3);
+    --action-disabledBackground-dark: rgba(255, 255, 255, 0.12);
+    --background-default-dark: #303030;
+    --background-paper-dark: #424242;
+    --divider-dark: rgba(255, 255, 255, 0.12);
+    /* Light Mode */
+    --text-primary-light: rgba(0, 0, 0, 0.87);
+    --text-secondary-light: rgba(0, 0, 0, 0.54);
+    --text-disabled-light: rgba(0, 0, 0, 0.38);
+    --action-active-light: rgba(0, 0, 0, 0.54);
+    --action-hover-light: rgba(0, 0, 0, 0.04);
+    --action-selected-light: rgba(0, 0, 0, 0.08);
+    --action-disabled-light: rgba(0, 0, 0, 0.26);
+    --action-disabledBackground-light: rgba(0, 0, 0, 0.12);
+    --background-default-light: #fafafa;
+    --background-paper-light: #fff;
+    --divider-light: rgba(0, 0, 0, 0.12);
+  }
+  
+  .toogle-on-desktop, 
+  .toogle-off-desktop, 
+  .fa-github {
+    font-size: 30px !important;
+    vertical-align: middle !important;
+  }
+
+nav .fa {
+    color: var(--action-active-dark);    
+}
+
+body .toogle-on-desktop {
+    display: none;
+}
+
+body .toogle-off-desktop {
+    display: initial;
+}
+
+body.dark .toogle-on-desktop {
+    display: initial;
+}
+
+body.dark .toogle-off-desktop {
+    display: none;
+}
