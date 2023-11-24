@@ -1,8 +1,73 @@
+:root {
+    /* Dark Mode */
+    --text-primary-dark: #fff;
+    --text-secondary-dark: rgba(255, 255, 255, 0.7);
+    --text-disabled-dark: rgba(255, 255, 255, 0.5);
+    --action-active-dark: #fff;
+    --action-hover-dark: rgba(255, 255, 255, 0.08);
+    --action-selected-dark: rgba(255, 255, 255, 0.16);
+    --action-disabled-dark: rgba(255, 255, 255, 0.3);
+    --action-disabledBackground-dark: rgba(255, 255, 255, 0.12);
+    --background-default-dark: #303030;
+    --background-paper-dark: #424242;
+    --divider-dark: rgba(255, 255, 255, 0.12);
+    --input-disabled-dark: rgba(255, 255, 255, 0.3);
+    --input-dark: rgba(255, 255, 255, 0.7);
+    /* Light Mode */
+    --text-primary-light: rgba(0, 0, 0, 0.87);
+    --text-secondary-light: rgba(0, 0, 0, 0.54);
+    --text-disabled-light: rgba(0, 0, 0, 0.38);
+    --action-active-light: rgba(0, 0, 0, 0.54);
+    --action-hover-light: rgba(0, 0, 0, 0.04);
+    --action-selected-light: rgba(0, 0, 0, 0.08);
+    --action-disabled-light: rgba(0, 0, 0, 0.26);
+    --action-disabledBackground-light: rgba(0, 0, 0, 0.12);
+    --background-default-light: #fafafa;
+    --background-paper-light: #fff;
+    --divider-light: rgba(0, 0, 0, 0.12);
+    --input-disabled-light: #495057;
+    --input-light: #fff
+}
+
+body {
+    background-color: var(--background-default-light);
+    color: var(--text-primary-light);
+}
+
+body.dark, 
+body.dark .card-header{
+    background-color: var(--background-default-dark);
+    color: var(--text-primary-dark);
+}
+
+body.dark .card-body {
+    background-color: var(--background-paper-dark);
+    color: var(--text-primary-dark);
+}
+
+body.dark .card {
+    background-color: var(--background-default-dark);
+    border: 1px solid var(--divider-dark);
+}
+
+body.dark .card-header {
+    border-bottom: 1px solid var(--divider-dark);
+}
+
+body.dark .form-control {
+    background-color: var(--input-dark);
+    border: 1px solid var(--divider-dark);
+}
+
+body.dark .form-control:disabled {
+    background-color: var(--text-disabled-dark);
+}
+
 @-ms-viewport{
     width: device-width;
   }
 
-#app {
+  #app {
    margin: auto;
    padding-top: 20px;
    width: fit-content;
@@ -27,3 +92,4 @@ table {
     border-collapse: separate;
     text-align: center;
 }
+
