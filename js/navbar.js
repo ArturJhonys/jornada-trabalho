@@ -20,10 +20,6 @@ const getCookie = (name) => {
     ToggleDarkMode(theme)
   })
   
-  const ToggleMenu = () => {
-    document.getElementsByClassName("navbar-list")[0].classList.toggle('show')
-  }
-  
   const ToggleDarkMode = (theme) => {
     document.body.className = ''
     document.body.classList.add(theme)
